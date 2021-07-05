@@ -45,7 +45,8 @@ public class EmployeeController {
   @GetMapping("/test-transaction")
   public String createEmployeeInTransaction() {
     DatabaseContextHolder.setCurrentDbInContext(commonOrganizationService.findDbMoniker(ORG_ID));
-    employeeService.saveEmployeeTestMethodLevelTransaction();
+    //employeeService.saveEmployeeTestMethodLevelTransaction();
+    employeeService.saveEmployeeTestProgTansactionManagement();
     return "Record Created Successfully";
   }
 
